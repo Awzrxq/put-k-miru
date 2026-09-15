@@ -2,11 +2,223 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Путь к миру</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путь к миру — Центр психологии и интегративной медиации</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Путь к миру</h1>
-    <p>Сайт работает! Проверь API: <a href="/api/health">/api/health</a></p>
-    <p>Заявки: <a href="/api/appointments">/api/appointments</a></p>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                <div class="logo__icon">🌿</div>
+                <div class="logo__text">
+                    <span class="logo__title">Путь к миру</span>
+                    <span class="logo__subtitle">Центр психологии и медиации</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="#about" class="nav__link">О нас</a>
+                <a href="#services" class="nav__link">Услуги</a>
+                <a href="#specialists" class="nav__link">Специалисты</a>
+                <a href="#reviews" class="nav__link">Отзывы</a>
+                <a href="#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <button class="btn btn--primary" data-modal-open>Записаться</button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero__container">
+            <div class="hero__content">
+                <span class="hero__tagline">ПОНИМАТЬ • СЛЫШАТЬ • ДОГОВАРИВАТЬСЯ</span>
+                <h1 class="hero__title">Путь к миру — начинается с диалога</h1>
+                <p class="hero__desc">Психологическая поддержка и интегративная медиация для гармоничных отношений</p>
+                <button class="btn btn--primary btn--large" data-modal-open>Записаться на консультацию →</button>
+                <p class="hero__subtext">Больше, чем решение конфликта.<br>Ближе к себе. Ближе к другим. Ближе к миру.</p>
+            </div>
+            <div class="hero__visual">
+                <div class="hero__quote">Гармония<br><em>возможна</em></div>
+                <div class="hero__stones">
+                    <div class="stone"></div>
+                    <div class="stone"></div>
+                    <div class="stone"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features">
+        <div class="container features__grid">
+            <div class="feature-card">
+                <div class="feature-card__icon">👥</div>
+                <h3>Поддержка</h3>
+                <p>в сложных жизненных ситуациях</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon">🌿</div>
+                <h3>Медиация</h3>
+                <p>экологичное решение конфликтов</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon">❤️</div>
+                <h3>Развитие</h3>
+                <p>личной и семейной гармонии</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card__icon">∞</div>
+                <h3>Уважение</h3>
+                <p>к каждому сценарию жизни</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="container about__container">
+            <div class="about__text">
+                <h2 class="section-title">О нашем центре</h2>
+                <p>«Путь к миру» — это пространство, где психология и интегративная медиация помогают находить взаимопонимание, восстанавливать отношения и создавать новые возможности.</p>
+                <p>Мы верим, что каждый конфликт может стать точкой роста, а каждый человек — найти свой путь к внутреннему и внешнему миру.</p>
+                <button class="btn btn--secondary" data-modal-open>Узнать больше</button>
+            </div>
+            <div class="about__visual">
+                <div class="about__img-placeholder">
+                    <div class="olive-branch">🌿</div>
+                </div>
+                <div class="about__quote">
+                    <p>Люди.<br>Диалог.<br>Возможности.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services__header">
+                <h2 class="section-title">Наши услуги</h2>
+                <a href="#" class="link-arrow">Смотреть все услуги →</a>
+            </div>
+            <div class="services__grid">
+                <div class="service-card" data-service="Индивидуальная психологическая консультация">
+                    <div class="service-card__icon">👤</div>
+                    <h3>Индивидуальная психологическая консультация</h3>
+                    <p>Поддержка на вашем пути</p>
+                    <span class="arrow-btn">→</span>
+                </div>
+                <div class="service-card" data-service="Семейная медиация">
+                    <div class="service-card__icon">👥</div>
+                    <h3>Семейная медиация</h3>
+                    <p>Диалог для гармонии</p>
+                    <span class="arrow-btn">→</span>
+                </div>
+                <div class="service-card" data-service="Разрешение конфликтов без суда">
+                    <div class="service-card__icon">🕊️</div>
+                    <h3>Разрешение конфликтов без суда</h3>
+                    <p>В отношениях, семье, на работе</p>
+                    <span class="arrow-btn">→</span>
+                </div>
+                <div class="service-card" data-service="Личностное развитие">
+                    <div class="service-card__icon">🪷</div>
+                    <h3>Личностное развитие</h3>
+                    <p>Больше осознанности — больше свободы</p>
+                    <span class="arrow-btn">→</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Цитата -->
+    <section class="quote-banner">
+        <div class="container">
+            <h2 class="quote-banner__text">«Мир начинается там, где нас слышат»</h2>
+            <div class="quote-banner__author">— Путь к миру</div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container cta__container">
+            <div class="cta__text">
+                <h2>Готовы сделать первый шаг?</h2>
+                <p>Запишитесь на консультацию — и мы вместе найдем путь к решению.</p>
+            </div>
+            <div class="cta__action">
+                <button class="btn btn--primary btn--large" data-modal-open>Записаться сейчас →</button>
+                <p class="cta__small">Конфиденциально • Заботливо • Профессионально</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer" id="contacts">
+        <div class="container footer__container">
+            <div class="footer__logo">
+                <div class="logo__icon">🌿</div>
+                <div class="logo__text">
+                    <span class="logo__title">Путь к миру</span>
+                    <span class="logo__subtitle">Центр психологии и медиации</span>
+                </div>
+            </div>
+            <nav class="footer__nav">
+                <a href="#about" class="nav__link">О нас</a>
+                <a href="#services" class="nav__link">Услуги</a>
+                <a href="#specialists" class="nav__link">Специалисты</a>
+                <a href="#reviews" class="nav__link">Отзывы</a>
+                <a href="#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <div class="footer__socials">
+                <a href="#" class="social-link">TG</a>
+                <a href="#" class="social-link">IG</a>
+                <a href="#" class="social-link">VK</a>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 Центр «Путь к миру». Все права защищены.</p>
+            <div class="footer__links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Карта сайта</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно записи -->
+    <div class="modal" id="modal">
+        <div class="modal__overlay" data-modal-close></div>
+        <div class="modal__content">
+            <button class="modal__close" data-modal-close>✕</button>
+            <h2 class="modal__title">Записаться на консультацию</h2>
+            <p class="modal__subtitle">Оставьте контакты — мы свяжемся с вами в течение дня</p>
+            <form class="modal__form" id="appointmentForm">
+                <input type="text" name="name" placeholder="Ваше имя *" required>
+                <input type="tel" name="phone" placeholder="Телефон *" required>
+                <select name="service_type">
+                    <option value="">Выберите услугу</option>
+                    <option value="Индивидуальная психологическая консультация">Индивидуальная консультация</option>
+                    <option value="Семейная медиация">Семейная медиация</option>
+                    <option value="Разрешение конфликтов без суда">Разрешение конфликтов без суда</option>
+                    <option value="Личностное развитие">Личностное развитие</option>
+                </select>
+                <textarea name="message" placeholder="Кратко опишите ситуацию (необязательно)" rows="3"></textarea>
+                <button type="submit" class="btn btn--primary btn--large">Отправить заявку</button>
+                <p class="modal__small">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+            </form>
+            <div class="modal__success" id="modalSuccess" style="display: none;">
+                <div class="modal__success-icon">✓</div>
+                <h3>Заявка отправлена!</h3>
+                <p>Мы свяжемся с вами в ближайшее время.</p>
+                <button class="btn btn--primary" data-modal-close>Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
