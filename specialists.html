@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Специалисты — Путь к миру</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Логотип Путь к миру" class="logo__img">
+                <div class="logo__text">
+                    <span class="logo__title">Путь к миру</span>
+                    <span class="logo__subtitle">Центр психологии и медиации</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html#about" class="nav__link">О нас</a>
+                <a href="services.html" class="nav__link">Услуги</a>
+                <a href="mediation.html" class="nav__link">Медиация</a>
+                <a href="specialists.html" class="nav__link nav__link--active">Специалисты</a>
+                <a href="index.html#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <button class="btn btn--primary" data-modal-open>Записаться</button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="page-hero__tag">НАША КОМАНДА</span>
+            <h1 class="page-hero__title">Специалисты центра</h1>
+            <p class="page-hero__desc">Профессиональные психологи и медиаторы, которым можно доверять</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container content-container content-container--wide">
+
+            <div class="intro-text">
+                <p>Нажмите на карточку, чтобы узнать больше о специалисте</p>
+            </div>
+
+            <div class="specialists-grid">
+
+                <!-- Специалист 1: мужчина (данные уточняются) -->
+                <div class="specialist-card" data-specialist-open="spec-1">
+                    <div class="specialist-card__photo">
+                        <img src="images/specialists/specialist-1.jpg" alt="Специалист">
+                    </div>
+                    <div class="specialist-card__info">
+                        <h3 class="specialist-card__name">Имя Фамилия</h3>
+                        <p class="specialist-card__role">Психолог, медиатор</p>
+                    </div>
+                    <!-- Скрытые данные для модалки -->
+                    <div class="specialist-data" id="spec-1" style="display: none;"
+                         data-name="Имя Фамилия"
+                         data-role="Психолог, медиатор"
+                         data-photo="images/specialists/specialist-1.jpg"
+                         data-tags="Психология|Медиация">
+                        <p>Информация о специалисте будет добавлена в ближайшее время.</p>
+                    </div>
+                </div>
+
+                <!-- Специалист 2: Ковырзина Юлия Валерьевна -->
+                <div class="specialist-card" data-specialist-open="spec-2">
+                    <div class="specialist-card__photo">
+                        <img src="images/specialists/specialist-2.jpg" alt="Ковырзина Юлия Валерьевна">
+                    </div>
+                    <div class="specialist-card__info">
+                        <h3 class="specialist-card__name">Ковырзина Юлия Валерьевна</h3>
+                        <p class="specialist-card__role">Профессиональный медиатор, юрист</p>
+                    </div>
+                    <!-- Скрытые данные для модалки -->
+                    <div class="specialist-data" id="spec-2" style="display: none;"
+                         data-name="Ковырзина Юлия Валерьевна"
+                         data-role="Профессиональный медиатор, юрист"
+                         data-photo="images/specialists/specialist-2.jpg"
+                         data-tags="Медиация|Юрист|Восстановительный подход">
+                        <p>Профессиональный медиатор со специализацией восстановительного подхода, юрист, член Национальной Ассоциации профессиональных медиаторов «ПАРИТЕТ».</p>
+                        <p>Имеет <strong>20+ лет опыта в юриспруденции</strong>, в том числе в государственных органах управления и надзора, деятельность по обеспечению безопасности на предприятии Росатома.</p>
+                        <p><strong>Дополнительное образование:</strong> экономика управления предприятием, юридическое сопровождение НКО, информационная безопасность.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cta-inline">
+                <h3>Не знаете, к кому записаться?</h3>
+                <p>Оставьте заявку — мы поможем подобрать специалиста под ваш запрос</p>
+                <button class="btn btn--primary btn--large" data-modal-open>Получить консультацию</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Логотип" class="logo__img">
+                <div class="logo__text">
+                    <span class="logo__title">Путь к миру</span>
+                    <span class="logo__subtitle">Центр психологии и медиации</span>
+                </div>
+            </a>
+            <nav class="footer__nav">
+                <a href="index.html#about" class="nav__link">О нас</a>
+                <a href="services.html" class="nav__link">Услуги</a>
+                <a href="mediation.html" class="nav__link">Медиация</a>
+                <a href="specialists.html" class="nav__link">Специалисты</a>
+                <a href="index.html#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <div class="footer__socials">
+                <a href="#" class="social-link">TG</a>
+                <a href="#" class="social-link">IG</a>
+                <a href="#" class="social-link">VK</a>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 Центр «Путь к миру». Все права защищены.</p>
+            <div class="footer__links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Карта сайта</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно специалиста -->
+    <div class="specialist-modal" id="specialistModal">
+        <div class="specialist-modal__overlay" data-specialist-close></div>
+        <div class="specialist-modal__content">
+            <button class="specialist-modal__close" data-specialist-close>✕</button>
+            <div class="specialist-modal__grid">
+                <div class="specialist-modal__photo">
+                    <img id="modalPhoto" src="" alt="Специалист">
+                </div>
+                <div class="specialist-modal__body">
+                    <h2 class="specialist-modal__name" id="modalName"></h2>
+                    <p class="specialist-modal__role" id="modalRole"></p>
+                    <div class="specialist-modal__tags" id="modalTags"></div>
+                    <div class="specialist-modal__desc" id="modalDesc"></div>
+                    <button class="btn btn--primary btn--large" data-modal-open>Записаться к специалисту</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно записи -->
+    <div class="modal" id="modal">
+        <div class="modal__overlay" data-modal-close></div>
+        <div class="modal__content">
+            <button class="modal__close" data-modal-close>✕</button>
+            <h2 class="modal__title">Записаться на консультацию</h2>
+            <p class="modal__subtitle">Оставьте контакты — мы свяжемся с вами в течение дня</p>
+            <form class="modal__form" id="appointmentForm">
+                <input type="text" name="name" placeholder="Ваше имя *" required>
+                <input type="tel" name="phone" placeholder="Телефон *" required>
+                <select name="service_type">
+                    <option value="">Выберите услугу</option>
+                    <option value="Индивидуальная психологическая консультация">Индивидуальная консультация</option>
+                    <option value="Семейная медиация">Семейная медиация</option>
+                    <option value="Разрешение конфликтов без суда">Разрешение конфликтов без суда</option>
+                    <option value="Личностное развитие">Личностное развитие</option>
+                </select>
+                <textarea name="message" placeholder="Кратко опишите ситуацию (необязательно)" rows="3"></textarea>
+                <button type="submit" class="btn btn--primary btn--large">Отправить заявку</button>
+                <p class="modal__small">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+            </form>
+            <div class="modal__success" id="modalSuccess" style="display: none;">
+                <div class="modal__success-icon">✓</div>
+                <h3>Заявка отправлена!</h3>
+                <p>Мы свяжемся с вами в ближайшее время.</p>
+                <button class="btn btn--primary" data-modal-close>Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

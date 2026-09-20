@@ -112,3 +112,75 @@ document.querySelectorAll('.feature-card, .service-card, .about__text, .about__v
 });
 
 console.log('🌿 Сайт «Путь к миру» загружен');
+
+/* ============================================
+   МОДАЛЬНОЕ ОКНО СПЕЦИАЛИСТА
+   ============================================ */
+const specialistModal = document.getElementById('specialistModal');
+const modalPhoto = document.getElementById('modalPhoto');
+const modalName = document.getElementById('modalName');
+const modalRole = document.getElementById('modalRole');
+const modalTags = document.getElementById('modalTags');
+const modalDesc = document.getElementById('modalDesc');
+
+// Открытие модалки специалиста
+document.querySelectorAll('[data-specialist-open]').forEach(card => {
+    card.addEventListener('click', () => {
+        const id = card.dataset.specialistOpen;
+        const data = document.getElementById(id);
+
+        if (!data) return;
+
+        // Подставляем данные
+        modalPhoto.src = data.dataset.photo || '';
+        modalPhoto.alt = data.dataset.name || 'Специалист';
+        modalName.textContent = data.dataset.name || '';
+        modalRole.textContent = data.dataset.role || '';
+        modalDesc.innerHTML = data.innerHTML;
+
+        // Теги
+        modalTags.innerHTML = '';
+        if (data.dataset.tags) {
+            data.dataset.tags.split('|').forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'tag';
+                span.textContent = tag.trim();
+                modalTags.appendChild(span);
+            });
+        }
+
+        specialistModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Закрытие модалки специалиста
+document.querySelectorAll('[data-specialist-close]').forEach(el => {
+    el.addEventListener('click', () => {
+        specialistModal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
+
+// Esc закрывает модалку специалиста
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && specialistModal.classList.contains('active')) {
+        specialistModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// Клик по кнопке "Записаться" внутри модалки специалиста — закрывает её и открывает модалку записи
+document.querySelectorAll('.specialist-modal [data-modal-open]').forEach(btn => {
+    btn.addEventListener('click', () => {
+        specialistModal.classList.remove('active');
+        // Небольшая задержка, чтобы анимация закрытия прошла
+        setTimeout(() => {
+            const appointmentModal = document.getElementById('modal');
+            if (appointmentModal) {
+                appointmentModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }, 200);
+    });
+});

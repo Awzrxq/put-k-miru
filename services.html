@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги и цены — Путь к миру</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Логотип Путь к миру" class="logo__img">
+                <div class="logo__text">
+                    <span class="logo__title">Путь к миру</span>
+                    <span class="logo__subtitle">Центр психологии и медиации</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html#about" class="nav__link">О нас</a>
+                <a href="services.html" class="nav__link nav__link--active">Услуги</a>
+                <a href="mediation.html" class="nav__link">Медиация</a>
+                <a href="specialists.html" class="nav__link">Специалисты</a>
+                <a href="index.html#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <button class="btn btn--primary" data-modal-open>Записаться</button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <span class="page-hero__tag">ПРОЗРАЧНЫЕ ТАРИФЫ</span>
+            <h1 class="page-hero__title">Услуги и стоимость</h1>
+            <p class="page-hero__desc">Медиация и психологические консультации — понятные цены без скрытых платежей</p>
+        </div>
+    </section>
+
+    <section class="service-categories">
+        <div class="container categories-grid">
+            <a href="#mediator" class="category-card">
+                <div class="category-card__icon">⚖️</div>
+                <h3>Услуги медиатора</h3>
+                <p>Разрешение конфликтов без суда</p>
+                <span class="category-card__arrow">↓</span>
+            </a>
+            <a href="#psychologist" class="category-card">
+                <div class="category-card__icon">💚</div>
+                <h3>Услуги психолога</h3>
+                <p>Индивидуальные и парные консультации</p>
+                <span class="category-card__arrow">↓</span>
+            </a>
+            <a href="#notes" class="category-card">
+                <div class="category-card__icon">📋</div>
+                <h3>Условия работы</h3>
+                <p>Важные примечания к тарифам</p>
+                <span class="category-card__arrow">↓</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="content-section" id="mediator">
+        <div class="container content-container content-container--wide">
+
+            <div class="section-head">
+                <h2>Услуги медиатора</h2>
+                <p>Стоимость зависит от типа спора и формата работы. Ниже — базовые тарифы.</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="pricing-table pricing-table--mediator">
+                    <thead>
+                        <tr>
+                            <th rowspan="2" class="pricing-table__stage">Этап медиативной процедуры</th>
+                            <th colspan="4" class="pricing-table__group">Стороны спора</th>
+                        </tr>
+                        <tr>
+                            <th>Физ — Физ<br><small>(частный конфликт)</small></th>
+                            <th>Внутри-<br>корпоративный</th>
+                            <th>Юр — Юр<br><small>(конфликт в бизнесе)</small></th>
+                            <th>С несовер-<br>шеннолетним</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Первичная информационная консультация (устно), руб/час</td>
+                            <td>бесплатно</td>
+                            <td>бесплатно</td>
+                            <td>бесплатно</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>Регистрационный взнос</td>
+                            <td>12 000</td>
+                            <td>8 000</td>
+                            <td>10 000</td>
+                            <td>16 000</td>
+                        </tr>
+                        <tr>
+                            <td>Процедура медиации (кокусы), руб/час</td>
+                            <td>6 000</td>
+                            <td>6 000</td>
+                            <td>8 000</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>Медиативное соглашение</td>
+                            <td>14 000</td>
+                            <td>15 000</td>
+                            <td>20 000</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>Консультационные услуги специалистов, экспертов, др. медиатора (ко-медиация)</td>
+                            <td>6 000</td>
+                            <td>6 000</td>
+                            <td>6 000</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>Участие в нотариальной регистрации соглашения</td>
+                            <td>бесплатно</td>
+                            <td>бесплатно</td>
+                            <td>бесплатно</td>
+                            <td>8 000</td>
+                        </tr>
+                        <tr>
+                            <td>Выезд медиатора для проведения процедуры, руб/час</td>
+                            <td>12 000</td>
+                            <td>10 000</td>
+                            <td>12 000</td>
+                            <td>20 000</td>
+                        </tr>
+                        <tr>
+                            <td>Сопровождение медиативного соглашения</td>
+                            <td colspan="4" class="pricing-table__span">по согласованию между сторонами</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="download-block">
+                <div class="download-block__icon">📥</div>
+                <div class="download-block__text">
+                    <h4>Скачать таблицу услуг</h4>
+                    <p>Документ Word с полной таблицей тарифов</p>
+                </div>
+                <a href="documents/price-table.docx" download class="btn btn--primary">Скачать</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section content-section--light" id="psychologist">
+        <div class="container content-container">
+
+            <div class="section-head">
+                <h2>Услуги психолога</h2>
+                <p>Сбалансированное психоэмоциональное состояние помогает быстрее прийти к решению. Именно поэтому в нашем центре работают профессиональные психологи.</p>
+            </div>
+
+            <div class="psychologist-cards">
+                <div class="psychologist-card">
+                    <h3>Индивидуальная консультация</h3>
+                    <div class="psychologist-card__price">6 000 ₽</div>
+                    <p>Личная работа со специалистом для восстановления внутреннего равновесия</p>
+                </div>
+                <div class="psychologist-card">
+                    <h3>Семейная (парная) консультация</h3>
+                    <div class="psychologist-card__price">9 000 ₽</div>
+                    <p>Совместная работа пары над отношениями и взаимопониманием</p>
+                </div>
+                <div class="psychologist-card">
+                    <h3>Участие в процедуре медиации</h3>
+                    <div class="psychologist-card__price">6 000 ₽/час</div>
+                    <p>Почасовая поддержка психолога в ходе медиативного процесса</p>
+                </div>
+            </div>
+
+            <p class="note-text">* Время консультации устанавливается индивидуально, но не более 1,5 часов. При превышении лимита оплата согласовывается со специалистом.</p>
+        </div>
+    </section>
+
+    <section class="content-section" id="notes">
+        <div class="container content-container">
+
+            <div class="section-head">
+                <h2>Примечания к тарифам</h2>
+                <p>Важные условия работы медиатора — пожалуйста, ознакомьтесь</p>
+            </div>
+
+            <ol class="notes-list">
+                <li>В стоимость регистрационного взноса входит: первичная консультация обратившейся стороны (1 час), анализ конфликта и оценка медиабельности, встреча со второй стороной (1 час), подготовка к подписанию соглашения. При превышении лимита — оплата по тарифу.</li>
+                <li>В расчет стоимости процедуры медиации входит всё время, затраченное медиатором на совместную и раздельную (кокусы) работу с оппонентами спора, включая время проведения самой процедуры примирения.</li>
+                <li>При достижении соглашения стороны оплачивают организационный сбор (по тарифу по виду спора) и авансовый платёж — минимум 2 астрономических часа работы медиатора. Возврату не подлежат.</li>
+                <li>В стоимость медиативного соглашения входит вся работа специалистов центра по подготовке текста, включая юридическую экспертизу правомочности принимаемых вариантов.</li>
+                <li>По окончании процедуры производится окончательный расчёт по факту общего времени (за вычетом аванса). Время фиксируется медиатором на каждой встрече.</li>
+                <li>В стоимость консультационных услуг входит время консультации специалиста, приглашённого Центром. Стороны вправе приглашать экспертов самостоятельно, согласуя с ними стоимость напрямую.</li>
+                <li>Сопровождение исполнения медиативного соглашения — по дополнительному соглашению между сторонами.</li>
+                <li>Все суммы оплачиваются сторонами в равных долях, если не предусмотрено иное.</li>
+                <li>Расходы по оплате услуг нотариуса оплачиваются сторонами отдельно, по согласованию между сторонами.</li>
+                <li>Работа по анализу документов — 5 000 ₽ за объём материала не более 50 печатных листов. При объёме свыше 50 листов — повышающий коэффициент +10%.</li>
+                <li>Выезд медиатора и приглашённых специалистов в иные регионы — по тарифу за час работы без учёта транспортных и командировочных расходов.</li>
+                <li>При проведении челночной медиации вводится повышающий коэффициент +30%.</li>
+                <li>Указанные тарифы применяются при участии в споре двух сторон. При участии большего числа сторон стоимость увеличивается, размеры оговариваются на предварительной консультации.</li>
+                <li>При урегулировании имущественных споров свыше 50 млн рублей размер и порядок оплаты определяется индивидуально.</li>
+            </ol>
+
+            <div class="callout">
+                <p><strong>Нужна консультация по вашему вопросу?</strong></p>
+                <p>Оставьте заявку — мы подберём оптимальный формат работы и рассчитаем стоимость.</p>
+            </div>
+
+            <div class="cta-inline">
+                <h3>Готовы начать?</h3>
+                <p>Запишитесь на бесплатную первичную консультацию</p>
+                <button class="btn btn--primary btn--large" data-modal-open>Записаться на консультацию</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Логотип" class="logo__img">
+                <div class="logo__text">
+                    <span class="logo__title">Путь к миру</span>
+                    <span class="logo__subtitle">Центр психологии и медиации</span>
+                </div>
+            </a>
+            <nav class="footer__nav">
+                <a href="index.html#about" class="nav__link">О нас</a>
+                <a href="services.html" class="nav__link">Услуги</a>
+                <a href="mediation.html" class="nav__link">Медиация</a>
+                <a href="specialists.html" class="nav__link">Специалисты</a>
+                <a href="index.html#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <div class="footer__socials">
+                <a href="#" class="social-link">TG</a>
+                <a href="#" class="social-link">IG</a>
+                <a href="#" class="social-link">VK</a>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 Центр «Путь к миру». Все права защищены.</p>
+            <div class="footer__links">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Карта сайта</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modal__overlay" data-modal-close></div>
+        <div class="modal__content">
+            <button class="modal__close" data-modal-close>✕</button>
+            <h2 class="modal__title">Записаться на консультацию</h2>
+            <p class="modal__subtitle">Оставьте контакты — мы свяжемся с вами в течение дня</p>
+            <form class="modal__form" id="appointmentForm">
+                <input type="text" name="name" placeholder="Ваше имя *" required>
+                <input type="tel" name="phone" placeholder="Телефон *" required>
+                <select name="service_type">
+                    <option value="">Выберите услугу</option>
+                    <option value="Индивидуальная психологическая консультация">Индивидуальная консультация</option>
+                    <option value="Семейная медиация">Семейная медиация</option>
+                    <option value="Разрешение конфликтов без суда">Разрешение конфликтов без суда</option>
+                    <option value="Личностное развитие">Личностное развитие</option>
+                </select>
+                <textarea name="message" placeholder="Кратко опишите ситуацию (необязательно)" rows="3"></textarea>
+                <button type="submit" class="btn btn--primary btn--large">Отправить заявку</button>
+                <p class="modal__small">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+            </form>
+            <div class="modal__success" id="modalSuccess" style="display: none;">
+                <div class="modal__success-icon">✓</div>
+                <h3>Заявка отправлена!</h3>
+                <p>Мы свяжемся с вами в ближайшее время.</p>
+                <button class="btn btn--primary" data-modal-close>Закрыть</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
