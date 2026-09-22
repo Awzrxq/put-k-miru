@@ -184,3 +184,45 @@ document.querySelectorAll('.specialist-modal [data-modal-open]').forEach(btn => 
         }, 200);
     });
 });
+
+/* ============================================
+   МОДАЛКА ПРИМЕЧАНИЙ К ТАРИФАМ
+   ============================================ */
+(function() {
+    const notesModal = document.getElementById('notesModal');
+    if (!notesModal) return;
+
+    const modalTitle = document.getElementById('notesModalTitle');
+    const modalList = document.getElementById('notesModalList');
+
+    // Открытие при клике на карточку
+    document.querySelectorAll('.notes-group').forEach(card => {
+        card.addEventListener('click', () => {
+            const titleEl = card.querySelector('.notes-group__header h3');
+            const listEl = card.querySelector('.notes-group__list');
+            if (!titleEl || !listEl) return;
+
+            modalTitle.textContent = titleEl.textContent.trim();
+            modalList.innerHTML = listEl.innerHTML;
+
+            notesModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Закрытие
+    document.querySelectorAll('[data-notes-close]').forEach(el => {
+        el.addEventListener('click', () => {
+            notesModal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Esc
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && notesModal.classList.contains('active')) {
+            notesModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+})();

@@ -42,11 +42,6 @@
             </div>
             <div class="hero__visual">
                 <div class="hero__quote">Гармония<br><em>возможна</em></div>
-                <div class="hero__stones">
-                    <div class="stone"></div>
-                    <div class="stone"></div>
-                    <div class="stone"></div>
-                </div>
             </div>
         </div>
     </section>
@@ -54,22 +49,22 @@
     <section class="features">
         <div class="container features__grid">
             <div class="feature-card">
-                <div class="feature-card__icon">👥</div>
+                <div class="feature-card__icon"><img src="images/icons/users.svg" alt="Команда" class="icon"></div>
                 <h3>Поддержка</h3>
                 <p>в сложных жизненных ситуациях</p>
             </div>
             <div class="feature-card">
-                <div class="feature-card__icon">🌿</div>
+                <div class="feature-card__icon"><img src="images/icons/leaf.svg" alt="Природа" class="icon"></div>
                 <h3>Медиация</h3>
                 <p>экологичное решение конфликтов</p>
             </div>
             <div class="feature-card">
-                <div class="feature-card__icon">❤️</div>
+                <div class="feature-card__icon"><img src="images/icons/heart.svg" alt="Сердце" class="icon"></div>
                 <h3>Развитие</h3>
                 <p>личной и семейной гармонии</p>
             </div>
             <div class="feature-card">
-                <div class="feature-card__icon">∞</div>
+                <div class="feature-card__icon"><img src="images/icons/infinity.svg" alt="Бесконечность" class="icon"></div>
                 <h3>Уважение</h3>
                 <p>к каждому сценарию жизни</p>
             </div>
@@ -87,7 +82,7 @@
             </div>
             <div class="about__visual">
                 <div class="about__img-placeholder">
-                    <div class="olive-branch">🌿</div>
+                    <img src="images/oliva.jpg" alt="Ветка оливы">
                 </div>
                 <div class="about__quote">
                     <p>Люди.<br>Диалог.<br>Возможности.</p>
@@ -104,25 +99,25 @@
             </div>
             <div class="services__grid">
                 <div class="service-card" data-service="Индивидуальная психологическая консультация">
-                    <div class="service-card__icon">👤</div>
+                    <div class="service-card__icon"><img src="images/icons/user.svg" alt="Пользователь" class="icon"></div>
                     <h3>Индивидуальная психологическая консультация</h3>
                     <p>Поддержка на вашем пути</p>
                     <span class="arrow-btn">→</span>
                 </div>
                 <div class="service-card" data-service="Семейная медиация">
-                    <div class="service-card__icon">👥</div>
+                    <div class="service-card__icon"><img src="images/icons/users.svg" alt="Команда" class="icon"></div>
                     <h3>Семейная медиация</h3>
                     <p>Диалог для гармонии</p>
                     <span class="arrow-btn">→</span>
                 </div>
                 <div class="service-card" data-service="Разрешение конфликтов без суда">
-                    <div class="service-card__icon">🕊️</div>
+                    <div class="service-card__icon"><img src="images/icons/handshake.svg" alt="Соглашение" class="icon"></div>
                     <h3>Разрешение конфликтов без суда</h3>
                     <p>В отношениях, семье, на работе</p>
                     <span class="arrow-btn">→</span>
                 </div>
                 <div class="service-card" data-service="Личностное развитие">
-                    <div class="service-card__icon">🪷</div>
+                    <div class="service-card__icon"><img src="images/icons/flower.svg" alt="Цветок" class="icon"></div>
                     <h3>Личностное развитие</h3>
                     <p>Больше осознанности — больше свободы</p>
                     <span class="arrow-btn">→</span>
@@ -131,7 +126,8 @@
         </div>
     </section>
 
-    <section class="quote-banner">
+    <!-- Блок цитаты с фоновой картинкой -->
+    <section class="quote-banner" style="padding: 140px 20px; text-align: center; min-height: 480px; display: flex; align-items: center; justify-content: center; background: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.55)), url('images/foot_fon.jpg') no-repeat center center / cover;">
         <div class="container">
             <h2 class="quote-banner__text">«Мир начинается там, где нас слышат»</h2>
             <div class="quote-banner__author">— Путь к миру</div>
@@ -153,23 +149,24 @@
 
     <footer class="footer" id="contacts">
         <div class="container footer__container">
-            <div class="footer__logo">
+            <a href="index.html" class="logo">
                 <img src="images/logo.png" alt="Логотип" class="logo__img">
                 <div class="logo__text">
                     <span class="logo__title">Путь к миру</span>
                     <span class="logo__subtitle">Центр психологии и медиации</span>
                 </div>
-            </div>
+            </a>
             <nav class="footer__nav">
                 <a href="#about" class="nav__link">О нас</a>
                 <a href="services.html" class="nav__link">Услуги</a>
                 <a href="mediation.html" class="nav__link">Медиация</a>
+                <a href="specialists.html" class="nav__link">Специалисты</a>
                 <a href="#contacts" class="nav__link">Контакты</a>
             </nav>
             <div class="footer__socials">
-                <a href="#" class="social-link">TG</a>
-                <a href="#" class="social-link">IG</a>
-                <a href="#" class="social-link">VK</a>
+                <a href="https://t.me/mirolubie_life" class="social-link" target="_blank" rel="noopener" title="Telegram">TG</a>
+                <a href="https://vk.ru/club237018779" class="social-link" target="_blank" rel="noopener" title="ВКонтакте">VK</a>
+                <a href="https://max.ru/join/X0SMIYUxzeXqcdrU2OMdlDkHs-CjMJesvC8Y8C05H9k" class="social-link" target="_blank" rel="noopener" title="MAX">MAX</a>
             </div>
         </div>
         <div class="container footer__bottom">
