@@ -25,6 +25,14 @@ services:
       DB_NAME: ${DB_NAME}
       DB_HOST: db
       DB_PORT: 5432
+      MAIL_SERVER: ${MAIL_SERVER}
+      MAIL_PORT: ${MAIL_PORT}
+      MAIL_USE_SSL: ${MAIL_USE_SSL}
+      MAIL_USE_TLS: ${MAIL_USE_TLS}
+      MAIL_USERNAME: ${MAIL_USERNAME}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      MAIL_DEFAULT_SENDER: ${MAIL_DEFAULT_SENDER}
+      MAIL_RECIPIENT: ${MAIL_RECIPIENT}
     depends_on:
       - db
     networks:

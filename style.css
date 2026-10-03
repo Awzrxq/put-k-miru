@@ -2055,3 +2055,41 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     }
     .notes-group::after { display: none; }
 }
+
+/* === ФИКС: фото специалиста в модалке === */
+.specialist-modal__photo {
+    min-height: 500px !important;
+    max-height: 90vh !important;
+    display: flex !important;
+    align-items: stretch !important;
+    background: #e8e4d8 !important;
+}
+
+.specialist-modal__photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 25% !important;  /* ← сдвигаем фокус вниз, чтобы голова была целиком */
+}
+
+/* На мобилке — фото сверху, фиксированная высота */
+@media (max-width: 768px) {
+    .specialist-modal__photo {
+        min-height: 300px !important;
+        max-height: 340px !important;
+    }
+    .specialist-modal__photo img {
+        object-position: center 20% !important;
+    }
+}
+
+/* === ФИКС: фото специалиста — сдвиг вправо === */
+.specialist-modal__photo img {
+    object-position: 65% 25% !important;
+}
+
+@media (max-width: 768px) {
+    .specialist-modal__photo img {
+        object-position: 65% 20% !important;
+    }
+}
