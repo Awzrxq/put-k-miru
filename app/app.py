@@ -12,6 +12,13 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)
 
+# Безопасность: секретный ключ и настройки cookie
+app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'dev-only-key-change-me')
+app.config['SESSION_COOKIE_SECURE'] = True
+app.config['SESSION_COOKIE_HTTPONLY'] = True
+app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+app.config['PERMANENT_SESSION_LIFETIME'] = 3600  # 1 час
+
 DB_CONFIG = {
     'host': os.getenv('DB_HOST', 'db'),
     'port': os.getenv('DB_PORT', 5432),
