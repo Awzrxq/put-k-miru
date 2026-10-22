@@ -87,6 +87,10 @@ def get_appointments():
 def create_appointment():
     try:
         data = request.get_json()
+
+        # Honeypot check
+        if data.get('website'):
+            return jsonify({'status': 'ok'}), 201  # Fake success for bots
         name = data.get('name')
         phone = data.get('phone')
         service_type = data.get('service_type', '')

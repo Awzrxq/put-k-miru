@@ -47,6 +47,14 @@ form.addEventListener('submit', async (e) => {
     submitBtn.textContent = 'Отправляем...';
     submitBtn.disabled = true;
 
+    // Honeypot check
+    if (form.website && form.website.value !== '') {
+        console.log('Spam detected');
+        form.style.display = 'none';
+        successBlock.style.display = 'block';
+        return;
+    }
+
     const formData = {
         name: form.name.value.trim(),
         phone: form.phone.value.trim(),

@@ -11,6 +11,15 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo_favicon_512.png">
     <link rel="apple-touch-icon" href="images/logo_favicon_512.png">
+
+    <!-- SEO и Open Graph -->
+    <meta name="description" content="Центр психологии и интегративной медиации «Путь к миру». Помощь психолога, разрешение конфликтов без суда, профессиональная медиация.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Путь к миру — Центр психологии и медиации">
+    <meta property="og:description" content="Психологическая поддержка и медиация для гармоничных отношений.">
+    <meta property="og:image" content="images/hero-bg.jpg">
+    <meta property="og:url" content="https://put-k-miru.ru"> <!-- Заменим при покупке домена -->
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -127,7 +136,7 @@
         <div class="container footer__bottom">
             <p>© 2026 Центр «Путь к миру». Все права защищены.</p>
             <div class="footer__links">
-                <a href="#">Политика конфиденциальности</a>
+                <a href="privacy.html">Политика конфиденциальности</a>
                 <a href="#">Карта сайта</a>
             </div>
         </div>
@@ -161,6 +170,7 @@
             <h2 class="modal__title">Записаться на консультацию</h2>
             <p class="modal__subtitle">Оставьте контакты — мы свяжемся с вами в течение дня</p>
             <form class="modal__form" id="appointmentForm">
+                <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px; opacity:0;" aria-hidden="true">
                 <input type="text" name="name" placeholder="Ваше имя *" required>
                 <input type="tel" name="phone" placeholder="Телефон *" required>
                 <select name="service_type">
