@@ -2568,3 +2568,37 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         min-width: 50px !important;
     }
 }
+
+/* ============================================
+   ФИНАЛЬНЫЙ РАЗМЕР ЛОГОТИПА (Золотая середина)
+   ============================================ */
+
+/* В шапке */
+.header .logo__img, 
+.logo img {
+    width: 70px !important;
+    height: 70px !important;
+    max-width: 70px !important; /* Перебиваем прошлые 85px */
+    min-width: 70px !important;
+    object-fit: contain !important;
+}
+
+/* В футере делаем чуть меньше шапки, чтобы сохранить пропорции */
+.footer .logo__img {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
+    min-width: 60px !important;
+    object-fit: contain !important;
+}
+
+/* Адаптив: на телефонах */
+@media (max-width: 992px) {
+    .header .logo__img, 
+    .logo img {
+        width: 55px !important;
+        height: 55px !important;
+        max-width: 55px !important;
+        min-width: 55px !important;
+    }
+}
