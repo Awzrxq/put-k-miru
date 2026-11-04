@@ -4,22 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Специалисты — Путь к миру</title>
+    <link rel="icon" type="image/png" href="images/logo_favicon_512.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo_favicon_512.png">
-    <link rel="apple-touch-icon" href="images/logo_favicon_512.png">
-
-    <!-- SEO и Open Graph -->
-    <meta name="description" content="Центр психологии и интегративной медиации «Путь к миру». Помощь психолога, разрешение конфликтов без суда, профессиональная медиация.">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Путь к миру — Центр психологии и медиации">
-    <meta property="og:description" content="Психологическая поддержка и медиация для гармоничных отношений.">
-    <meta property="og:image" content="images/hero-bg.jpg">
-    <meta property="og:url" content="https://put-k-miru.ru"> <!-- Заменим при покупке домена -->
-    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -43,7 +32,7 @@
         </div>
     </header>
 
-    <section class="page-hero page-hero--specialists">
+    <section class="page-hero">
         <div class="container">
             <span class="page-hero__tag">НАША КОМАНДА</span>
             <h1 class="page-hero__title">Специалисты центра</h1>
@@ -60,27 +49,7 @@
 
             <div class="specialists-grid">
 
-                <!-- Бобылев Виталий Олегович -->
-                <div class="specialist-card" data-specialist-open="spec-1">
-                    <div class="specialist-card__photo">
-                        <img src="images/specialists/specialist-1.jpg" alt="Бобылев Виталий Олегович">
-                    </div>
-                    <div class="specialist-card__info">
-                        <h3 class="specialist-card__name">Бобылев Виталий Олегович</h3>
-                        <p class="specialist-card__role">Психоаналитик, психолог</p>
-                    </div>
-                    <div class="specialist-data" id="spec-1" style="display: none;"
-                         data-name="Бобылев Виталий Олегович"
-                         data-role="Психоаналитик, психолог, духовный деятель"
-                         data-photo="images/specialists/specialist-1.jpg"
-                         data-tags="Психоанализ|Гештальт|Медитация|Духовные практики">
-                        <p><strong>Более 25 лет практикует</strong> психоанализ, гештальт-терапию и когнитивно-поведенческие методы. Также работает с духовными практиками: медитация, дыхательные техники, осознанное внимание, телесно-энергетические методы.</p>
-                        <p><strong>Концепция деятельности:</strong> человек — это уникальное сочетание ценностей, чувств, сознания и тела. В консультациях уделяет особое внимание индивидуальности каждого, разбирая запрос через душу, эмоции и тело.</p>
-                        <p>Использует <strong>эмпатичный, разумный и целостный подход</strong> к решению задач.</p>
-                    </div>
-                </div>
-
-                <!-- Ковырзина Юлия Валерьевна -->
+                <!-- 1. Ковырзина Юлия Валерьевна (СЛЕВА) -->
                 <div class="specialist-card" data-specialist-open="spec-2">
                     <div class="specialist-card__photo">
                         <img src="images/specialists/specialist-2.jpg" alt="Ковырзина Юлия Валерьевна">
@@ -89,6 +58,7 @@
                         <h3 class="specialist-card__name">Ковырзина Юлия Валерьевна</h3>
                         <p class="specialist-card__role">Профессиональный медиатор, юрист</p>
                     </div>
+                    <!-- Скрытые данные для модалки -->
                     <div class="specialist-data" id="spec-2" style="display: none;"
                          data-name="Ковырзина Юлия Валерьевна"
                          data-role="Профессиональный медиатор, юрист"
@@ -100,9 +70,30 @@
                     </div>
                 </div>
 
+                <!-- 2. Бобылев Виталий Олегович (СПРАВА) -->
+                <div class="specialist-card" data-specialist-open="spec-1">
+                    <div class="specialist-card__photo">
+                        <img src="images/specialists/specialist-1.jpg" alt="Бобылев Виталий Олегович">
+                    </div>
+                    <div class="specialist-card__info">
+                        <h3 class="specialist-card__name">Бобылев Виталий Олегович</h3>
+                        <p class="specialist-card__role">Психоаналитик, психолог</p>
+                    </div>
+                    <!-- Скрытые данные для модалки -->
+                    <div class="specialist-data" id="spec-1" style="display: none;"
+                         data-name="Бобылев Виталий Олегович"
+                         data-role="Психоаналитик, психолог, духовный деятель"
+                         data-photo="images/specialists/specialist-1.jpg"
+                         data-tags="Психоанализ|Гештальт|Медитация|Духовные практики">
+                        <p><strong>Более 25 лет практикует</strong> психоанализ, гештальт-терапию и когнитивно-поведенческие методы. Также работает с духовными практиками: медитация, дыхательные техники, осознанное внимание, телесно-энергетические методы.</p>
+                        <p><strong>Концепция деятельности:</strong> человек — это уникальное сочетание ценностей, чувств, сознания и тела. В консультациях уделяет особое внимание индивидуальности каждого, разбирая запрос через душу, эмоции и тело.</p>
+                        <p>Использует <strong>эмпатичный, разумный и целостный подход</strong> к решению задач.</p>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="cta-inline">
+            <div class="cta-inline cta-inline--bg">
                 <h3>Не знаете, к кому записаться?</h3>
                 <p>Оставьте заявку — мы поможем подобрать специалиста под ваш запрос</p>
                 <button class="btn btn--primary btn--large" data-modal-open>Получить консультацию</button>
@@ -170,7 +161,6 @@
             <h2 class="modal__title">Записаться на консультацию</h2>
             <p class="modal__subtitle">Оставьте контакты — мы свяжемся с вами в течение дня</p>
             <form class="modal__form" id="appointmentForm">
-                <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute; left:-9999px; opacity:0;" aria-hidden="true">
                 <input type="text" name="name" placeholder="Ваше имя *" required>
                 <input type="tel" name="phone" placeholder="Телефон *" required>
                 <select name="service_type">

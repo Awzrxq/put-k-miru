@@ -234,3 +234,48 @@ document.querySelectorAll('.specialist-modal [data-modal-open]').forEach(btn => 
         }
     });
 })();
+
+/* ============================================
+   СМЕНА ЦИТАТ В HERO-СЕКЦИИ
+   ============================================ */
+document.addEventListener('DOMContentLoaded', () => {
+    const quotes = [
+        { text: "Мир — это не цель, мир — это путь.", author: "Махатма Ганди" },
+        { text: "Мир в душе рождает мир вокруг.", author: "Джалаладдин Руми" },
+        { text: "Хочешь мира — твори мир внутри.", author: "Лао-цзы" },
+        { text: "Миролюбие — признак истинного величия.", author: "Сенека" },
+        { text: "Гармония — это простое согласие с собой.", author: "Альбер Камю" },
+        { text: "Где лад, там и клад.", author: "Русская пословица" },
+        { text: "Гармония — это согласие разногласий.", author: "Гераклит" },
+        { text: "Победи себя — и выиграешь тысячу битв.", author: "Будда" },
+        { text: "Равновесие внутри удерживает мир вокруг.", author: "Николай Рерих" }
+    ];
+
+    let currentIndex = 0;
+    const textEl = document.getElementById('quoteText');
+    const authorEl = document.getElementById('quoteAuthor');
+
+    // Если элементов нет на странице — выходим
+    if (!textEl || !authorEl) return;
+
+    function changeQuote() {
+        // 1. Плавно скрываем (добавляем класс)
+        textEl.classList.add('quote-hidden');
+        authorEl.classList.add('quote-hidden');
+
+        // 2. Ждём окончания анимации исчезновения (0.8 сек)
+        setTimeout(() => {
+            // 3. Меняем текст
+            currentIndex = (currentIndex + 1) % quotes.length;
+            textEl.textContent = quotes[currentIndex].text;
+            authorEl.textContent = `— ${quotes[currentIndex].author}`;
+
+            // 4. Плавно показываем (убираем класс)
+            textEl.classList.remove('quote-hidden');
+            authorEl.classList.remove('quote-hidden');
+        }, 800); // Должно совпадать с transition в CSS
+    }
+
+    // Запускаем таймер: каждые 20 секунд (20000 мс)
+    setInterval(changeQuote, 20000);
+});

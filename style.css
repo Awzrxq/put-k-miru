@@ -2093,3 +2093,478 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         object-position: 65% 20% !important;
     }
 }
+
+/* ============================================
+   HERO: БЛОК С МЕНЯЮЩИМИСЯ ЦИТАТАМИ
+   ============================================ */
+
+/* Контейнер для цитат (верхняя часть правого блока) */
+.hero__quotes-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 320px;
+    text-align: right;
+    z-index: 2;
+}
+
+/* Текст самой цитаты */
+.hero__quote-text {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--color-text-dark);
+    line-height: 1.4;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 15px rgba(255, 255, 255, 0.8);
+    
+    /* Плавная анимация */
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Автор цитаты */
+.hero__quote-author {
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    
+    /* Плавная анимация */
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Класс для скрытия (исчезновения) */
+.quote-hidden {
+    opacity: 0 !important;
+}
+
+/* Сдвигаем «Гармонию возможна» ниже и правее */
+.hero__quote {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 2rem;
+    color: var(--color-primary);
+    line-height: 1.3;
+    text-align: right;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.7);
+}
+
+/* Адаптив: на мобилках убираем абсолютное позиционирование */
+@media (max-width: 992px) {
+    .hero__quotes-container {
+        position: relative;
+        top: 0;
+        right: 0;
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto 20px auto;
+    }
+    
+    .hero__quote {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* ============================================
+   HERO: ФИНАЛЬНЫЕ НАСТРОЙКИ ЦИТАТ (Убрана Гармония)
+   ============================================ */
+
+/* Контейнер для цитат */
+.hero__quotes-container {
+    position: absolute;
+    bottom: 40px;          /* Опускаем вниз к камушкам */
+    right: 20px;           /* Прижимаем вправо */
+    max-width: 450px;      /* Увеличиваем ширину, чтобы текст не прыгал */
+    text-align: right;
+    z-index: 2;
+}
+
+/* Текст самой цитаты */
+.hero__quote-text {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-size: 1.8rem !important;    /* Увеличиваем шрифт (было 1.4) */
+    color: var(--color-text-dark);
+    line-height: 1.3;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 15px rgba(255, 255, 255, 0.9); /* Тень для читаемости на фоне */
+    
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Автор цитаты */
+.hero__quote-author {
+    font-family: var(--font-main);
+    font-size: 1rem !important;      /* Увеличиваем шрифт (было 0.85) */
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Адаптив: на мобилках убираем абсолютное позиционирование */
+@media (max-width: 992px) {
+    .hero__quotes-container {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        max-width: 100%;
+        text-align: center;
+        margin: 30px auto 0 auto;
+        padding: 0 20px;
+    }
+    .hero__quote-text {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* ============================================
+   HERO: ТОЧНАЯ НАСТРОЙКА ЦИТАТ (Ниже, крупнее)
+   ============================================ */
+
+/* Переопределяем позицию */
+.hero__quotes-container {
+    position: absolute !important;
+    top: 55% !important;          /* Спускаем ниже (примерно уровень описания слева) */
+    bottom: auto !important;
+    right: 30px !important;       /* Чуть отступаем от правого края */
+    max-width: 550px !important;  /* Делаем блок шире */
+    text-align: right;
+    transform: translateY(-50%) !important; /* Идеально центрируем по вертикали */
+    z-index: 2;
+}
+
+/* Увеличиваем текст цитаты */
+.hero__quote-text {
+    font-size: 2.4rem !important; /* Было 1.8rem, теперь 2.4rem */
+    line-height: 1.25 !important;
+    margin-bottom: 18px !important;
+}
+
+/* Увеличиваем автора */
+.hero__quote-author {
+    font-size: 1.1rem !important; /* Было 1rem */
+}
+
+/* Адаптив для мобилок возвращаем в поток */
+@media (max-width: 992px) {
+    .hero__quotes-container {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        transform: none !important;
+        margin: 40px auto 0 auto !important;
+        text-align: center !important;
+        padding: 0 20px !important;
+    }
+    .hero__quote-text {
+        font-size: 1.8rem !important;
+    }
+}
+
+/* ============================================
+   CTA-БЛОК С ФОНОВОЙ КАРТИНКОЙ
+   ============================================ */
+.cta-inline--bg {
+    /* Используем foot_fon.jpg с белым оверлеем 85% */
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/foot_fon.jpg') no-repeat center center / cover !important;
+    border: 1px solid #eef0ec;
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Немного выделим текст и кнопку на фоне */
+.cta-inline--bg h3 {
+    color: var(--color-text-dark);
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
+}
+
+.cta-inline--bg p {
+    color: var(--color-text-gray);
+    text-shadow: 0 1px 8px rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   УЛУЧШЕНИЕ ЛОГОТИПА И ШАПКИ (ГЛОБАЛЬНО)
+   ============================================ */
+
+/* Делаем шапку чуть выше и просторнее */
+.header {
+    padding: 20px 0 !important;
+}
+
+.header__container {
+    gap: 30px !important;
+}
+
+/* Сам логотип */
+.logo {
+    gap: 16px !important; /* Расстояние между картинкой и текстом */
+}
+
+.logo__img {
+    width: 64px !important;  /* Увеличиваем картинку логотипа (было 52) */
+    height: 64px !important;
+}
+
+/* Текст логотипа */
+.logo__text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important; /* Убираем "слипание" строк */
+    line-height: 1.15 !important;
+}
+
+.logo__title {
+    font-size: 1.45rem !important; /* Увеличиваем заголовок (было 1.15) */
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.logo__subtitle {
+    font-size: 0.8rem !important; /* Увеличиваем подзаголовок (было 0.65) */
+    letter-spacing: 1px !important;
+    color: var(--color-text-gray) !important;
+    font-weight: 500 !important;
+}
+
+/* Навигация и кнопка, чтобы не смотрелись мелко на фоне крупного лого */
+.nav__link {
+    font-size: 1rem !important;
+}
+
+.header .btn {
+    padding: 16px 34px !important;
+    font-size: 1rem !important;
+}
+
+/* ============================================
+   ФУТЕР (Чтобы было единообразно)
+   ============================================ */
+.footer .logo__img {
+    width: 56px !important; /* В подвале чуть меньше, но крупнее чем было */
+    height: 56px !important;
+}
+
+.footer .logo__title {
+    font-size: 1.3rem !important;
+}
+
+.footer .logo__subtitle {
+    font-size: 0.75rem !important;
+    gap: 4px !important;
+}
+
+/* ============================================
+   АДАПТИВ: на телефонах скрываем подзаголовок, чтобы шапка не ломалась
+   ============================================ */
+@media (max-width: 768px) {
+    .logo__img {
+        width: 48px !important;
+        height: 48px !important;
+    }
+    .logo__title {
+        font-size: 1.2rem !important;
+    }
+    .logo__subtitle {
+        display: none !important; /* На мобилках оставляем только название */
+    }
+    .header {
+        padding: 12px 0 !important;
+    }
+}
+
+/* ============================================
+   УВЕЛИЧЕНИЕ ПОДЗАГОЛОВКА (Центр психологии...)
+   ============================================ */
+
+/* В шапке */
+.logo__subtitle {
+    font-size: 1rem !important; /* Было 0.8, теперь 1rem (стандартный размер) */
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important; /* Убираем сильное разряжение, текст не будет "расползаться" */
+    color: var(--color-text-dark) !important; /* Делаем чуть темнее для читаемости */
+    white-space: nowrap !important; /* Запрещаем перенос строки */
+    margin-top: 2px !important;
+}
+
+/* В подвале */
+.footer .logo__subtitle {
+    font-size: 0.9rem !important; /* В подвале чуть меньше, но крупнее чем было */
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important;
+    color: var(--color-text-gray) !important;
+    white-space: nowrap !important;
+}
+
+/* На мобильных оставляем скрытым (как делали ранее), 
+   чтобы крупный текст не ломал шапку на узких экранах */
+@media (max-width: 768px) {
+    .logo__subtitle {
+        display: none !important; 
+    }
+}
+
+/* ============================================
+   ФИНАЛЬНОЕ УВЕЛИЧЕНИЕ ПОДЗАГОЛОВКА
+   ============================================ */
+
+.header .logo__subtitle {
+    font-size: 1.15rem !important; /* Было 1rem, теперь 1.15rem (около 18px) */
+    font-weight: 500 !important;
+    color: var(--color-text-dark) !important; /* Темный цвет для контраста */
+    letter-spacing: 0 !important; /* Убираем разрядку, чтобы текст занимал меньше места */
+    margin-top: 5px !important; /* Отодвигаем от "Путь к миру" */
+}
+
+/* В подвале тоже подтягиваем размер, чтобы не отставало */
+.footer .logo__subtitle {
+    font-size: 1rem !important; 
+    letter-spacing: 0 !important;
+    margin-top: 4px !important;
+}
+
+/* На планшетах (когда места мало) чуть уменьшаем, чтобы не сломать верстку */
+@media (max-width: 1100px) {
+    .header .logo__subtitle {
+        font-size: 1rem !important;
+    }
+}
+
+/* ============================================
+   ИЕРАРХИЯ ЛОГОТИПА (Путь к миру - главный!)
+   ============================================ */
+
+/* Главное название делаем большим и жирным */
+.header .logo__title {
+    font-size: 1.8rem !important;    /* Увеличиваем (было 1.45) */
+    font-weight: 700 !important;     /* Делаем максимально жирным */
+    color: var(--color-text-dark) !important; /* Угольно-черный */
+    letter-spacing: 0.5px !important;
+}
+
+/* Подзаголовок делаем чуть бледнее и меньше, чтобы он не спорил */
+.header .logo__subtitle {
+    font-size: 0.95rem !important;   /* Чуть уменьшаем (было 1.15) */
+    color: var(--color-text-gray) !important; /* Серый цвет, чтобы отступить на второй план */
+    margin-top: 4px !important;
+}
+
+/* То же самое для футера, чтобы было единообразно */
+.footer .logo__title {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+}
+
+.footer .logo__subtitle {
+    font-size: 0.85rem !important;
+}
+
+/* На мобилках оставляем нормальный размер */
+@media (max-width: 768px) {
+    .header .logo__title {
+        font-size: 1.4rem !important;
+    }
+}
+
+/* ============================================
+   УВЕЛИЧЕНИЕ ИКОНКИ ЛОГОТИПА (В шапке и футере)
+   ============================================ */
+
+/* В шапке */
+.header .logo__img {
+    width: 75px !important;   /* Увеличиваем (было 64) */
+    height: 75px !important;
+    object-fit: contain !important;
+}
+
+/* Выравниваем текст и логотип по центру, чтобы было аккуратно */
+.header .logo {
+    align-items: center !important; 
+}
+
+/* В футере */
+.footer .logo__img {
+    width: 65px !important;   /* Увеличиваем (было 56) */
+    height: 65px !important;
+    object-fit: contain !important;
+}
+
+/* Адаптив: на мобилках и планшетах уменьшаем, чтобы шапка не ломалась */
+@media (max-width: 992px) {
+    .header .logo__img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .header .logo__img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .footer .logo__img {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+/* ============================================
+   ГРОБОВОЙ ФИКС РАЗМЕРА ЛОГОТИПА (Убиваем старый max-width)
+   ============================================ */
+
+/* В шапке */
+.header .logo__img, 
+.logo img {
+    width: 85px !important;
+    height: 85px !important;
+    max-width: 85px !important; /* Перебиваем старые 48px */
+    min-width: 85px !important;
+    object-fit: contain !important;
+}
+
+/* В футере */
+.footer .logo__img {
+    width: 70px !important;
+    height: 70px !important;
+    max-width: 70px !important;
+    min-width: 70px !important;
+    object-fit: contain !important;
+}
+
+/* Адаптив: чтобы на телефонах не разрывало шапку */
+@media (max-width: 992px) {
+    .header .logo__img, 
+    .logo img {
+        width: 60px !important;
+        height: 60px !important;
+        max-width: 60px !important;
+        min-width: 60px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .header .logo__img, 
+    .logo img {
+        width: 50px !important;
+        height: 50px !important;
+        max-width: 50px !important;
+        min-width: 50px !important;
+    }
+}
