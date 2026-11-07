@@ -2602,3 +2602,241 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         min-width: 55px !important;
     }
 }
+
+/* ============================================
+   УВЕЛИЧЕНИЕ ВСЕХ SVG-ИКОНОК
+   ============================================ */
+
+/* Базовая иконка (если используется отдельно) */
+.icon {
+    width: 48px !important;
+    height: 48px !important;
+}
+
+/* Иконки в блоке "Преимущества" (Поддержка, Медиация и т.д.) */
+.feature-card__icon .icon {
+    width: 64px !important;
+    height: 64px !important;
+}
+
+/* Иконки в блоке "Наши услуги" на главной */
+.service-card__icon .icon {
+    width: 56px !important;
+    height: 56px !important;
+}
+
+/* Иконки в категориях на странице услуг (Медиатор, Психолог, Условия) */
+.category-card__icon .icon {
+    width: 58px !important;
+    height: 58px !important;
+}
+
+/* Иконка в блоке "Почему люди боятся конфликтов" на странице Медиации */
+.info-block__icon .icon {
+    width: 64px !important;
+    height: 64px !important;
+}
+
+/* Иконки в карточках преимуществ медиации (Финансы, Скорость и т.д.) */
+.benefit-card__icon .icon {
+    width: 54px !important;
+    height: 54px !important;
+}
+
+/* Иконка скачивания */
+.download-block__icon .icon {
+    width: 44px !important;
+    height: 44px !important;
+}
+
+/* Иконки в карточках примечаний (Оплата, Расчеты и т.д.) */
+.notes-group__icon {
+    width: 52px !important;
+    height: 52px !important;
+}
+
+/* ============================================
+   ФИНАЛЬНОЕ УВЕЛИЧЕНИЕ ИКОНОК В КАРТОЧКАХ
+   ============================================ */
+
+/* Иконки в блоке "Наши услуги" (на главной) */
+.service-card__icon .icon {
+    width: 80px !important;
+    height: 80px !important;
+    margin-bottom: 5px !important; /* Чуть подтягиваем текст ближе */
+}
+
+/* Иконки в блоке "Преимущества" (Поддержка, Медиация и т.д.) */
+.feature-card__icon .icon {
+    width: 75px !important;
+    height: 75px !important;
+    margin-bottom: 5px !important;
+}
+
+/* Иконки в категориях на странице "Услуги" */
+.category-card__icon .icon {
+    width: 70px !important;
+    height: 70px !important;
+}
+
+/* Иконки в карточках преимуществ на странице "Медиация" */
+.benefit-card__icon .icon {
+    width: 64px !important;
+    height: 64px !important;
+}
+
+/* На мобилках чуть уменьшаем, чтобы не ломалась сетка */
+@media (max-width: 768px) {
+    .service-card__icon .icon,
+    .feature-card__icon .icon {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+/* ============================================
+   ЛОГОТИПЫ СОЦСЕТЕЙ В ФУТЕРЕ
+   ============================================ */
+.social-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: var(--transition-smooth);
+}
+
+/* При наведении на кружок делаем иконку белой (инвертируем цвет) */
+.social-link:hover .social-icon {
+    filter: brightness(0) invert(1);
+    transform: scale(1.1);
+}
+
+/* Убираем старые стили текста, которые больше не нужны */
+.social-link[title="MAX"],
+.social-link[title="ВКонтакте"],
+.social-link[title="Telegram"] {
+    font-size: 0 !important; /* Скрываем текст, если он вдруг остался */
+}
+
+/* ============================================
+   ФИНАЛЬНЫЕ СТИЛИ ДЛЯ ЦВЕТНЫХ ЛОГОТИПОВ В ФУТЕРЕ
+   ============================================ */
+.social-icon {
+    width: 26px !important;
+    height: 26px !important;
+    object-fit: contain;
+    transition: var(--transition-smooth);
+    /* Добавляем легкую тень, чтобы цветные иконки не сливались с фоном */
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* При наведении: иконка становится белой, тень исчезает, размер чуть увеличивается */
+.social-link:hover .social-icon {
+    filter: brightness(0) invert(1) !important;
+    transform: scale(1.15);
+}
+
+/* Чуть увеличиваем сам кружок под иконкой для баланса */
+.social-link {
+    width: 48px !important;
+    height: 48px !important;
+    background: var(--color-white) !important; /* Белый фон для контраста с цветными иконками */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Легкая тень для объема */
+}
+
+/* При наведении на кружок - он становится зеленым */
+.social-link:hover {
+    background: var(--color-primary) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* ============================================
+   ФИНАЛЬНЫЕ СТИЛИ ДЛЯ СОЦСЕТЕЙ (ЦВЕТА + АНИМАЦИЯ)
+   ============================================ */
+
+/* Кружок вокруг иконки */
+.social-link {
+    background: var(--color-white) !important; /* Фон всегда белый */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition-smooth);
+}
+
+/* При наведении на кружок: фон не меняется, кружок чуть приподнимается */
+.social-link:hover {
+    background: var(--color-white) !important; /* Перебиваем оливковый фон */
+    transform: translateY(-4px) !important; /* Поднимаем вверх */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Сама иконка внутри кружка */
+.social-icon {
+    width: 26px !important;
+    height: 26px !important;
+    object-fit: contain;
+    transition: var(--transition-smooth);
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.05)) !important; /* Легкая тень */
+}
+
+/* При наведении на кружок: иконка увеличивается и немного наклоняется (правый угол вверх) */
+.social-link:hover .social-icon {
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1)) !important; /* Тень чуть усиливается */
+    transform: scale(1.2) rotate(6deg) !important; /* Увеличиваем на 20% и наклоняем */
+}
+
+/* ============================================
+   КРАСИВЫЙ РАЗДЕЛИТЕЛЬ СЕКЦИЙ (ЦВЕТОК)
+   ============================================ */
+.section-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 20px; /* Отступы сверху и снизу, чтобы не липло к тексту */
+    background: transparent;
+}
+
+.section-divider img {
+    max-width: 100%;
+    height: 40px; /* Фиксируем высоту, чтобы линии были тонкими */
+    object-fit: contain;
+    opacity: 0.9;
+    transition: var(--transition-smooth);
+}
+
+/* Легкая анимация при наведении на цветок */
+.section-divider img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* На мобилках делаем разделитель чуть компактнее */
+@media (max-width: 768px) {
+    .section-divider {
+        padding: 25px 15px;
+    }
+    .section-divider img {
+        height: 30px;
+    }
+}
+
+/* ============================================
+   УВЕЛИЧЕНИЕ РАЗДЕЛИТЕЛЯ
+   ============================================ */
+.section-divider img {
+    height: 60px !important; /* Увеличиваем с 40 до 60 пикселей */
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.section-divider {
+    padding: 50px 20px !important; /* Чуть больше воздуха вокруг */
+}
+
+/* На мобилках делаем чуть меньше, чтобы не занимал полэкрана */
+@media (max-width: 768px) {
+    .section-divider img {
+        height: 45px !important;
+    }
+    .section-divider {
+        padding: 30px 15px !important;
+    }
+}
